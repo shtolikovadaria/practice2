@@ -26,6 +26,6 @@ public class HRSystem {
         System.out.println(emp.getRole());       // Строка E
         //emp.promote(5000);                       // Строка F
         //emp.printSummary();                      // Строка G
-        emp.validatePassword("secret");          // Строка H
+        //emp.validatePassword("secret");          // Строка H
     }
 }
