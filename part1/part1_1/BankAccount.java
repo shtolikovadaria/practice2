@@ -38,14 +38,16 @@ public class BankAccount {
     static {
         // TODO: bankName = "Java Bank"; выведите "Банковская система инициализирована"
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        bankName = "Java Bank";
+        System.out.println("Банковская система инициализирована");
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     {
         // TODO: totalAccounts++; выведите "Создание счёта #" + totalAccounts
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        totalAccounts++;
+        System.out.println("Создание счёта #" + totalAccounts);
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
@@ -55,7 +57,9 @@ public class BankAccount {
      */
     public BankAccount(String owner, double initialBalance) {
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        this.owner = owner;
+        this.balance = initialBalance;
+        this.accountNumber = "ACC-" + totalAccounts;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
