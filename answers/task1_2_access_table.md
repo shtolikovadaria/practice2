@@ -17,13 +17,13 @@
 
 Для каждой строки (A–H) из `HRSystem.java` укажите:
 
-| Строка | Обращаемый член | Модификатор | Компилируется? (да/нет) | Причина |
-|--------|----------------|-------------|:-----------------------:|---------|
-| A | `emp.name` | | | |
-| B | `emp.age` | | | |
-| C | `emp.salary` | | | |
-| D | `emp.password` | | | |
-| E | `emp.getRole()` | | | |
-| F | `emp.promote(5000)` | | | |
-| G | `emp.printSummary()` | | | |
-| H | `emp.validatePassword("secret")` | | | |
+| Строка | Обращаемый член | Модификатор               | Компилируется? (да/нет) | Причина                                   |
+|--------|----------------|---------------------------|:-----------------------:|-------------------------------------------|
+| A | `emp.name` | 	public                   |           да            | Public доступен из любого пакета          |
+| B | `emp.age` | protected                 |           нет           | Protected доступен только в своем пакете  |
+| C | `emp.salary` | package-private (default) |           нет           |           Без модификатора доступен только внутри пакета company.core                                |
+| D | `emp.password` | private                   |           нет           |  Private доступен только внутри класса Employee       |
+| E | `emp.getRole()` |public  |           да            | Public метод доступен из любого пакета       |
+| F | `emp.promote(5000)` |   	protected    |           нет           |     Protected доступен только в своем пакете                                      |
+| G | `emp.printSummary()` | 	package-private (default) |           нет           |     Метод без модификатора доступен только внутри пакета company.core                                      |
+| H | `emp.validatePassword("secret")` | 	private |           нет           |    Private доступен только внутри класса Employee                                       |
