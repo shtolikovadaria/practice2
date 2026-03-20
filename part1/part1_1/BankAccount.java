@@ -68,7 +68,11 @@ public class BankAccount {
      */
     public void deposit(double amount) {
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        if (amount <= 0) {
+            System.out.println("Ошибка: сумма должна быть положительной");
+            return;
+        }
+        balance += amount;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
@@ -78,13 +82,21 @@ public class BankAccount {
      */
     public void withdraw(double amount) {
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+        if (amount <= 0) {
+            System.out.println("Ошибка: сумма должна быть положительной");
+            return;
+        }
+        if (balance < amount) {
+            System.out.println("Ошибка: недостаточно средств");
+            return;
+        }
+        balance -= amount;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
     public static int getTotalAccounts() {
         // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return 0; // TODO: верните totalAccounts
+        return totalAccounts;
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
@@ -94,8 +106,7 @@ public class BankAccount {
      */
     @Override
     public String toString() {
-        // ▼ ВАШ КОД ЗДЕСЬ ▼
-        return ""; // TODO: реализуйте формат выше
+        return String.format("[%s] %s: %.2f руб.", accountNumber, owner, balance);
         // ▲ КОНЕЦ ВАШЕГО КОДА ▲
     }
 
