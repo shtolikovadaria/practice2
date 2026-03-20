@@ -23,6 +23,7 @@ public class LoggableDemo {
         System.out.println("Уровень логирования: " + Loggable.getLogLevel());
         System.out.println();
 
+
         db.connect("jdbc:postgresql://localhost/mydb");
         System.out.println();
 
