@@ -40,33 +40,33 @@ public class StringPoolLab {
 
         System.out.println("=== Сравнение строк ===\n");
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: true. Причина:оба литерала, оба из пула -> ссылаются на один объект
         System.out.println("s1 == s2      : " + (s1 == s2));
         System.out.println("s1.equals(s2) : " + s1.equals(s2));
         System.out.println();
 
         // TODO: запишите свой прогноз ПЕРЕД запуском
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: false. Причина: s1 из пула, s3 из кучи (new) -> разные объекты
         System.out.println("s1 == s3      : " + (s1 == s3));
         System.out.println("s1.equals(s3) : " + s1.equals(s3));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: false. Причина: два разных объекта, созданных через new -> разные ссылки
         System.out.println("s3 == s4      : " + (s3 == s4));
         System.out.println("s3.equals(s4) : " + s3.equals(s4));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: true. Причина: intern() возвращает ссылку на объект из пула, а s1 из пула
         System.out.println("s1 == s5      : " + (s1 == s5));
         System.out.println("s1.equals(s5) : " + s1.equals(s5));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: true. Причина: Причина: "Hel" + "lo" вычисляется компилятором ->  результат из пула
         System.out.println("s1 == s6      : " + (s1 == s6));
         System.out.println("s1.equals(s6) : " + s1.equals(s6));
         System.out.println();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: false. Причина: конкатенация с переменной выполняется в рантайме -> новый объект
         System.out.println("s1 == s7      : " + (s1 == s7));
         System.out.println("s1.equals(s7) : " + s1.equals(s7));
         System.out.println();
@@ -78,7 +78,7 @@ public class StringPoolLab {
         sb.append('H').append('e').append('l').append('l').append('o');
         String s8 = sb.toString();
 
-        // Прогноз: ____ (true/false). Причина: ____
+        // Прогноз: false. Причина: StringBuilder создаёт новую строку в куче, не в пуле
         System.out.println("s1 == s8      : " + (s1 == s8));
         System.out.println("s1.equals(s8) : " + s1.equals(s8));
     }
